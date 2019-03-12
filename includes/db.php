@@ -1,5 +1,7 @@
 <?php
 
+$db_user = 'localhost';
+
 //Creating connection to MySql
 $connection = mysqli_connect('localhost', 'root', '', 'cms');
 
