@@ -5,7 +5,7 @@
 
         if(isset($_POST['submit'])) {
 
-        echo  $search = $_POST['search'];
+        $search = $_POST['search'];
 
      }
 
