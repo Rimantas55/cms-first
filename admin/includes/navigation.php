@@ -64,6 +64,9 @@
                             <li>
                                 <a href="#">Dropdown Item</a>
                             </li>
+                            <li>
+                                <a href="#">Profile</a>
+                            </li>
                         </ul>
                     </li>
 
