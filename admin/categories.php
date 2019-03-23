@@ -23,7 +23,18 @@
                         <small>Author</small>
                     </h1>
 
-
+                    <div class="col-xs-6">
+                        <form action="" method="">
+                            <div class="form-group">
+                                <input type="text" name="cat_title" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="submit" class="btn btn-primary" value="Add Category">
+                            </div>
+                        
+                        
+                        </form>
+                    </div>
 
 
 
