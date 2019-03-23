@@ -26,6 +26,7 @@
                     <div class="col-xs-6">
                         <form action="" method="">
                             <div class="form-group">
+                                <label for="cat_title">Add Category</label>
                                 <input type="text" name="cat_title" class="form-control">
                             </div>
                             <div class="form-group">
