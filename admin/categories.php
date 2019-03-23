@@ -3,7 +3,7 @@
 <div id="wrapper">
 
     <!-- Navigation -->
-<?php include "includes/admin_navigation.php";?> 
+    <?php include "includes/admin_navigation.php";?> 
 
 
 
@@ -32,20 +32,20 @@
                             <div class="form-group">
                                 <input type="submit" name="submit" class="btn btn-primary" value="Add Category">
                             </div>
-                        
-                        
+                            
+                            
                         </form>
                     </div><!-- Add Category Form -->
 
 
                     <div class="col-xs-6">
 
-                    <?php
+                        <?php
 
-                    $query = "SELECT * FROM categories";
-                    $select_categories = mysqli_query($connection, $query);
+                        $query = "SELECT * FROM categories";
+                        $select_categories = mysqli_query($connection, $query);
 
-                    ?>
+                        ?>
 
                         <table class="table table-bordered table-hover">
                             <thead>
@@ -58,36 +58,24 @@
 
 
 
-                        <?php
-                        while ($row = mysqli_fetch_assoc($select_categories)) {
-                            
-                            $cat_id = $row['cat_id'];
-                            $cat_title = $row['cat_title'];
+                                <?php
+                                while ($row = mysqli_fetch_assoc($select_categories)) {
+                                    
+                                    $cat_id = $row['cat_id'];
+                                    $cat_title = $row['cat_title'];
 
-                            echo "<tr>";
-                            echo "<td>{$cat_id}</td>";
-                            echo "<td>{$cat_title}</td>";
-                            echo "</tr>";
+                                    echo "<tr>";
+                                    echo "<td>{$cat_id}</td>";
+                                    echo "<td>{$cat_title}</td>";
+                                    echo "</tr>";
 
-                        }
+                                }
 
-                        ?>
+                                ?>
                                 
                             </tbody>
                         </table>
-
-
-
-
-
                     </div>
-
-
-
-
-
-
-
                 </div>
             </div><!-- /.row -->
             
@@ -105,4 +93,4 @@
 
     <!-- /#page-wrapper -->
 
-<?php include "includes/admin_footer.php";?> 
+    <?php include "includes/admin_footer.php";?> 
