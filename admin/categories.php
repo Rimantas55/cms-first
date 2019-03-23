@@ -35,7 +35,28 @@
                         
                         
                         </form>
+                    </div><!-- Add Category Form -->
+
+
+                    <div class="col-xs-6">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Category Title</th>
+                                </tr>
+                            </thead>
+                        </table>
+
+
+
+
+
                     </div>
+
+
+
+
 
 
 
