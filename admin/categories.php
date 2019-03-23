@@ -24,7 +24,49 @@
                     </h1>
 
                     <div class="col-xs-6">
-                        <form action="" method="">
+
+                        <?php
+
+                        if(isset($_POST['submit'])) {
+
+                           $cat_title = $_POST['cat_title'];
+
+                           if($cat_title == "" || empty($cat_title)) {
+
+                            echo "<div class='alert alert-danger'><h3>This field should not be empty</h3></div>";
+
+                           } else {
+
+                            $query = "INSERT INTO categories(cat_title)";
+                            $query .= "VALUE('{$cat_title}') ";
+
+                            $create_category_query = mysqli_query($connection, $query);
+
+                            if(!$create_category_query) {
+
+                                die("QUERY FAILED" . mysqli_error($connection));
+
+                            }
+
+
+                           }
+
+
+                        }
+
+                        ?>
+
+
+
+
+
+
+
+
+
+
+
+                        <form action="" method="post">
                             <div class="form-group">
                                 <label for="cat_title">Add Category</label>
                                 <input type="text" name="cat_title" class="form-control">
@@ -32,8 +74,8 @@
                             <div class="form-group">
                                 <input type="submit" name="submit" class="btn btn-primary" value="Add Category">
                             </div>
-                            
-                            
+
+
                         </form>
                     </div><!-- Add Category Form -->
 
@@ -60,7 +102,7 @@
 
                                 <?php
                                 while ($row = mysqli_fetch_assoc($select_categories)) {
-                                    
+
                                     $cat_id = $row['cat_id'];
                                     $cat_title = $row['cat_title'];
 
