@@ -114,6 +114,29 @@
 
                             ?>
                             
+                            <?php
+
+                            if(isset($_GET['delete'])) {
+
+                                $the_cat_id = $_GET['delete']; //$the_cat_id = $cat_id, naudojam kita pavadinima kad nesusipainioti
+
+                                $query = "DELETE FROM categories WHERE cat_id = {$the_cat_id}";
+                                $delete_query = mysqli_query($connection, $query);
+
+                            }
+
+
+
+
+
+
+                            ?>
+
+
+
+
+
+
                         </tbody>
                     </table>
                 </div>
