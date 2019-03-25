@@ -91,14 +91,16 @@
                             <?php }} ?>   
 
 
-                            <?php
+                            <?php 
 
-                            if(isset($_GET['delete'])) {
+                            //UPDATE QUERY
 
-                            $the_cat_id = $_GET['delete']; 
+                            if(isset($_POST['update_category'])) {
 
-                            $query = "DELETE FROM categories WHERE cat_id = {$the_cat_id}";
-                            $delete_query = mysqli_query($connection, $query);
+                            $the_cat_title = $_POST['cat_title']; 
+
+                            $query = "UPDATE categories SET cat_title = '{$the_cat_title}' WHERE cat_id = {cat_id} ";
+                            $update_query = mysqli_query($connection, $query);
 
 
 
@@ -109,7 +111,7 @@
 
 
 
-                                ?>
+                            ?>
 
 
 
@@ -117,7 +119,7 @@
 
                             </div>
                             <div class="form-group">
-                                <input type="submit" name="submit" class="btn btn-primary" value="Update Category">
+                                <input type="submit" name="update_category" class="btn btn-primary" value="Update Category">
                             </div>
                         </form>
 
