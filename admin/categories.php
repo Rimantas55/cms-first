@@ -94,7 +94,7 @@
 
 
 
-                            <?php //FIND ALL CATEGORIES
+                            <?php //FIND ALL CATEGORIES QUERY
 
                             $query = "SELECT * FROM categories";
                             $select_categories = mysqli_query($connection, $query);
