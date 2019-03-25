@@ -82,11 +82,6 @@
 
                 <div class="col-xs-6">
 
-                    <?php
-
-                    
-
-                    ?>
 
                     <table class="table table-bordered table-hover">
                         <thead>
@@ -99,7 +94,7 @@
 
 
 
-                            <?php
+                            <?php //FIND ALL CATEGORIES
 
                             $query = "SELECT * FROM categories";
                             $select_categories = mysqli_query($connection, $query);
