@@ -88,9 +88,33 @@
                                     <input value="<?php if(isset($cat_title)){echo $cat_title;}  ?>" type="text" name="cat_title" class="form-control">
 
 
-                                <?php }} ?>   
+                            <?php }} ?>   
 
-                                
+
+                            <?php
+
+                            if(isset($_GET['delete'])) {
+
+                            $the_cat_id = $_GET['delete']; 
+
+                            $query = "DELETE FROM categories WHERE cat_id = {$the_cat_id}";
+                            $delete_query = mysqli_query($connection, $query);
+
+
+
+                            }
+
+
+
+
+
+
+                                ?>
+
+
+
+
+
                             </div>
                             <div class="form-group">
                                 <input type="submit" name="submit" class="btn btn-primary" value="Update Category">
