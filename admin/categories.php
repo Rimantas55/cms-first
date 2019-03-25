@@ -6,7 +6,6 @@
     <?php include "includes/admin_navigation.php";?> 
 
 
-
     <div id="page-wrapper">
 
         <div class="container-fluid">
@@ -16,8 +15,6 @@
                 <div class="col-lg-12">
 
 
-
-
                     <h1 class="page-header">
                         WELLCOME TO ADMIN
                         <small>Author</small>
@@ -25,13 +22,13 @@
 
                     <div class="col-xs-6">
 
-                        <?php
+                        <?php 
 
                         if(isset($_POST['submit'])) {
 
-                         $cat_title = $_POST['cat_title'];
+                           $cat_title = $_POST['cat_title'];
 
-                         if($cat_title == "" || empty($cat_title)) {
+                           if($cat_title == "" || empty($cat_title)) {
 
                             echo "<div class='alert alert-danger'><h3>This field should not be empty</h3></div>";
 
@@ -48,22 +45,11 @@
 
                             }
 
-
                         }
-
 
                     }
 
                     ?>
-
-
-
-
-
-
-
-
-
 
 
                     <form action="" method="post">
@@ -79,7 +65,6 @@
                     </form>
                 </div><!-- Add Category Form -->
 
-
                 <div class="col-xs-6">
 
 
@@ -91,8 +76,6 @@
                             </tr>
                         </thead>
                         <tbody>
-
-
 
                             <?php //FIND ALL CATEGORIES QUERY
 
@@ -114,7 +97,7 @@
 
                             ?>
                             
-                            <?php
+                            <?php //DELETE QUERY
 
                             if(isset($_GET['delete'])) {
 
@@ -126,17 +109,7 @@
 
                             }
 
-
-
-
-
-
                             ?>
-
-
-
-
-
 
                         </tbody>
                     </table>
