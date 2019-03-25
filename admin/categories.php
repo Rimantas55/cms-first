@@ -102,6 +102,11 @@
                             $query = "UPDATE categories SET cat_title = '{$the_cat_title}' WHERE cat_id = {cat_id} ";
                             $update_query = mysqli_query($connection, $query);
 
+                            if(!$update_query) {
+
+                                DIE("QUERY FAILED" . mysqli_error($connection));
+                            }
+
 
 
                             }
