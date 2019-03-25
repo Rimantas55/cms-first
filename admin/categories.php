@@ -122,6 +122,7 @@
 
                                 $query = "DELETE FROM categories WHERE cat_id = {$the_cat_id}";
                                 $delete_query = mysqli_query($connection, $query);
+                                header("Location: categories.php"); //this will refresh browser and instantly will allow to send info to MySql db
 
                             }
 
